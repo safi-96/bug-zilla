@@ -1,24 +1,41 @@
-# README
+# Bug Zilla Application
+Users has many projects to work on and each project can have bugs and features which are created and assigned to/by users, and bugs can be resolved by devs and can be created by QAs.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Users has many roles such as:
+* Manager
+* Developer
+* QA
+and User can have profile picture
 
-Things you may want to cover:
+## Technologies
+* Ruby 3.2.2
+* Rails 7.0.8
+* TestSuite Rspec
+* Faker
+* SQLite3
+* Devise (For Authentication)
+* Pundit (For Authorization)
+* Jbuilder (for json object representation for front end)
+* Active Storage for handling file/image attachments
 
-* Ruby version
+## Development Setup
+1. Clone the project repo
+        $ git clone https://github.com/safi-96/bug-zilla.git
 
-* System dependencies
+2. Get into the project directory
+        cd bug-zilla
 
-* Configuration
+3. Install gems and their dependencies
+        $ bundle install
 
-* Database creation
+4. Run this command to create and populate DB
+        $ rails db:create db:migrate db:seed
 
-* Database initialization
+## For starting the development server
+        $ bundle exec rails s
 
-* How to run the test suite
+* Development server by default start on the port 3000
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## For running Test cases
+Run following command to run the test cases
+    $ rails rspec
